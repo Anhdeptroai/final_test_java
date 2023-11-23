@@ -6,6 +6,9 @@ package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.Panel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -406,9 +409,12 @@ public class MainLayout extends javax.swing.JFrame {
     }//GEN-LAST:event_btnQlyThethuvienActionPerformed
 
     private void btnDangxuatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangxuatActionPerformed
+        int a = JOptionPane.showConfirmDialog(this, "Bạn có chắc là sẽ đăng xuất chứ ");
+        if(a == JOptionPane.YES_OPTION){
         login dangnhap = new login(); // open JFrame MainLayout
         dangnhap.show(); // display MainLayout 
         dispose(); // close login
+        }
     }//GEN-LAST:event_btnDangxuatActionPerformed
 
     private void btnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeActionPerformed
@@ -454,6 +460,7 @@ public class MainLayout extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() { 
                 new MainLayout().setVisible(true);
+               
             }
         });
     }
