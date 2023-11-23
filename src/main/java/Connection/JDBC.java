@@ -20,8 +20,8 @@ public class JDBC {
         try {            
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String dbUrl = "jdbc:sqlserver://localhost:1433;DatabaseName=quanlithuvien;trustServerCertificate=true";
-            String username = "admin"; 
-            String password= "12";
+            String username = "sa"; 
+            String password= "12345";
             con = DriverManager.getConnection(dbUrl, username, password);
             //return true;
         } catch (Exception ex) {
